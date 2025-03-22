@@ -62,5 +62,10 @@ namespace SalesSystem.Infrastructure.Repositories
             _context.Products.Update(product);
             await _context.SaveChangesAsync();
         }
+
+        public IQueryable<Product> Query()
+        {
+            return _context.Products.AsNoTracking();
+        }
     }
 }

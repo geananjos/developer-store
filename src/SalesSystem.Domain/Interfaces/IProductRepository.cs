@@ -12,4 +12,5 @@ public interface IProductRepository
     Task UpdateAsync(Product product);
     Task DeleteAsync(Product product);
     Task<bool> ExistsAsync(int id);
+    IQueryable<Product> Query();
 }
