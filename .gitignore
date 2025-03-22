@@ -1,0 +1,87 @@
+## Ignore para projetos .NET
+# Diretórios e arquivos de build
+bin/
+obj/
+out/
+[Ll]og/
+*.log
+
+# Diretórios do Visual Studio
+.vs/
+.vscode/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Arquivos de cache e temporários
+*.cache
+*.pdb
+*.mdb
+*.dbmdl
+*.bak
+*.tmp
+*.ncb
+*.aps
+*.sdf
+*.ipch
+*.sbr
+*.scc
+
+# Arquivos de configuração locais
+appsettings.Development.json
+appsettings.Local.json
+secrets.json
+
+# Testes e cobertura
+TestResults/
+*.coverage
+*.coveragexml
+*.codecoverage
+coverage/
+
+# Pacotes
+*.nupkg
+*.snupkg
+packages/
+# Evita ignorar projetos que salvam pacotes localmente
+!**/packages.config
+
+# Build do Rider
+.idea/
+*.DotSettings.user
+
+# Arquivos do Mac
+.DS_Store
+
+# Arquivos do Windows
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# Outras IDEs e editores
+*.swp
+*.swo
+*.bak
+*.tmp
+*.orig
+
+# Arquivos gerados por ferramentas
+Generated_Code/
+
+# Certificados
+*.pfx
+*.p12
+*.key
+
+# Logs locais
+*.log
+logs/
+
+# Docker
+docker-compose.override.yml
+.env
+
+# Configuração de usuário para dotnet CLI
+.nuget/packages/
+.nuget/plugins/
