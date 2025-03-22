@@ -1,10 +1,10 @@
 ﻿using AutoMapper;
-using SalesSystem.Application.Commands.CreateProduct;
-using SalesSystem.Application.DTOs;
+using SalesSystem.Application.Products.Commands.CreateProduct;
+using SalesSystem.Application.Products.DTOs;
 using SalesSystem.Domain.Entities;
 using SalesSystem.Domain.ValueObjects;
 
-namespace SalesSystem.Application.Mappings
+namespace SalesSystem.Application.Products.Mappings
 {
     public class MappingProfile : Profile
     {

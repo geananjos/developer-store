@@ -1,6 +1,6 @@
 ﻿using System.Linq.Expressions;
 
-namespace SalesSystem.Application.Extensions
+namespace SalesSystem.Application.Common.Extensions
 {
     public static class QueryableExtensions
     {

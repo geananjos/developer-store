@@ -1,8 +1,8 @@
 ﻿using MediatR;
 using SalesSystem.Application.Common;
-using SalesSystem.Application.DTOs;
+using SalesSystem.Application.Products.DTOs;
 
-namespace SalesSystem.Application.Queries.GetProducts
+namespace SalesSystem.Application.Products.Queries.GetProducts
 {
     public class GetProductsQuery : IRequest<PaginatedResult<ProductDto>>
     {

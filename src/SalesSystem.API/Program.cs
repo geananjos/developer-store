@@ -1,9 +1,9 @@
 using FluentValidation;
 using FluentValidation.AspNetCore;
 using Microsoft.EntityFrameworkCore;
-using SalesSystem.Application.Commands.CreateProduct;
-using SalesSystem.Application.Mappings;
-using SalesSystem.Application.Validators;
+using SalesSystem.Application.Products.Commands.CreateProduct;
+using SalesSystem.Application.Products.Mappings;
+using SalesSystem.Application.Products.Validators;
 using SalesSystem.Domain.Interfaces;
 using SalesSystem.Infrastructure.Persistence;
 using SalesSystem.Infrastructure.Repositories;

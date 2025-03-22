@@ -1,9 +1,9 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using SalesSystem.Application.Commands.CreateProduct;
 using SalesSystem.Application.Common;
-using SalesSystem.Application.DTOs;
-using SalesSystem.Application.Queries.GetProducts;
+using SalesSystem.Application.Products.Commands.CreateProduct;
+using SalesSystem.Application.Products.DTOs;
+using SalesSystem.Application.Products.Queries.GetProducts;
 
 namespace SalesSystem.API.Controllers
 {

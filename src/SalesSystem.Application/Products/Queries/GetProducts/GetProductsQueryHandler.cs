@@ -3,11 +3,11 @@ using AutoMapper.QueryableExtensions;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using SalesSystem.Application.Common;
-using SalesSystem.Application.DTOs;
-using SalesSystem.Application.Extensions;
+using SalesSystem.Application.Common.Extensions;
+using SalesSystem.Application.Products.DTOs;
 using SalesSystem.Domain.Interfaces;
 
-namespace SalesSystem.Application.Queries.GetProducts
+namespace SalesSystem.Application.Products.Queries.GetProducts
 {
     public class GetProductsQueryHandler : IRequestHandler<GetProductsQuery, PaginatedResult<ProductDto>>
     {
@@ -27,7 +27,7 @@ namespace SalesSystem.Application.Queries.GetProducts
             if (!string.IsNullOrWhiteSpace(request.Category))
                 query = query.Where(p => p.Category.ToLower() == request.Category.ToLower());
 
-            
+
             if (!string.IsNullOrWhiteSpace(request.Order))
             {
                 var orders = request.Order.Split(',');

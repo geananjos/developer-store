@@ -1,7 +1,7 @@
 ﻿using MediatR;
-using SalesSystem.Application.DTOs;
+using SalesSystem.Application.Products.DTOs;
 
-namespace SalesSystem.Application.Commands.CreateProduct
+namespace SalesSystem.Application.Products.Commands.CreateProduct
 {
     public class CreateProductCommand : IRequest<ProductDto>
     {

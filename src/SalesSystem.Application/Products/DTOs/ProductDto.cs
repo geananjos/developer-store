@@ -1,4 +1,4 @@
-﻿namespace SalesSystem.Application.DTOs
+﻿namespace SalesSystem.Application.Products.DTOs
 {
     public class ProductDto
     {

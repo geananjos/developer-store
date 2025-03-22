@@ -1,10 +1,10 @@
 ﻿using AutoMapper;
 using MediatR;
-using SalesSystem.Application.DTOs;
+using SalesSystem.Application.Products.DTOs;
 using SalesSystem.Domain.Entities;
 using SalesSystem.Domain.Interfaces;
 
-namespace SalesSystem.Application.Commands.CreateProduct
+namespace SalesSystem.Application.Products.Commands.CreateProduct
 {
     public class CreateProductCommandHandler : IRequestHandler<CreateProductCommand, ProductDto>
     {
