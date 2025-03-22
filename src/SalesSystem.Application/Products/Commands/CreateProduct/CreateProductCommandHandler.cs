@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
 using MediatR;
 using SalesSystem.Application.Products.DTOs;
-using SalesSystem.Domain.Entities;
-using SalesSystem.Domain.Interfaces;
+using SalesSystem.Domain.Products;
+using SalesSystem.Domain.Products.Interfaces;
 
 namespace SalesSystem.Application.Products.Commands.CreateProduct
 {

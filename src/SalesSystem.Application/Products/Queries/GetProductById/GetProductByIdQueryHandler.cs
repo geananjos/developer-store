@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using MediatR;
 using SalesSystem.Application.Products.DTOs;
-using SalesSystem.Domain.Interfaces;
+using SalesSystem.Domain.Products.Interfaces;
 
 namespace SalesSystem.Application.Products.Queries.GetProductById
 {

@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using SalesSystem.Application.Common;
 using SalesSystem.Application.Common.Extensions;
 using SalesSystem.Application.Products.DTOs;
-using SalesSystem.Domain.Interfaces;
+using SalesSystem.Domain.Products.Interfaces;
 
 namespace SalesSystem.Application.Products.Queries.GetProducts
 {

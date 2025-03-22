@@ -1,6 +1,6 @@
-using SalesSystem.Domain.Entities;
+using SalesSystem.Domain.Products;
 
-namespace SalesSystem.Domain.Interfaces;
+namespace SalesSystem.Domain.Products.Interfaces;
 
 public interface IProductRepository
 {

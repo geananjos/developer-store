@@ -1,4 +1,4 @@
-namespace SalesSystem.Domain.ValueObjects;
+namespace SalesSystem.Domain.Products.ValueObjects;
 
 public class Rating
 {

@@ -1,6 +1,6 @@
-using SalesSystem.Domain.ValueObjects;
+using SalesSystem.Domain.Products.ValueObjects;
 
-namespace SalesSystem.Domain.Entities;
+namespace SalesSystem.Domain.Products;
 
 public class Product
 {

@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using SalesSystem.Application.Products.Commands.CreateProduct;
 using SalesSystem.Application.Products.Mappings;
 using SalesSystem.Application.Products.Validators;
-using SalesSystem.Domain.Interfaces;
+using SalesSystem.Domain.Products.Interfaces;
 using SalesSystem.Infrastructure.Persistence;
 using SalesSystem.Infrastructure.Repositories;
 

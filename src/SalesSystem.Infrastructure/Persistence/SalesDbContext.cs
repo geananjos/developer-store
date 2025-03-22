@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using SalesSystem.Domain.Entities;
+using SalesSystem.Domain.Products;
 
 namespace SalesSystem.Infrastructure.Persistence
 {

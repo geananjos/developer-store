@@ -1,5 +1,5 @@
 ﻿using MediatR;
-using SalesSystem.Domain.Interfaces;
+using SalesSystem.Domain.Products.Interfaces;
 
 namespace SalesSystem.Application.Products.Commands.DeleteProduct
 {

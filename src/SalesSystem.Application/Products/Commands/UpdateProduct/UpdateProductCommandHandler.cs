@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
 using MediatR;
 using SalesSystem.Application.Products.DTOs;
-using SalesSystem.Domain.Interfaces;
-using SalesSystem.Domain.ValueObjects;
+using SalesSystem.Domain.Products.Interfaces;
+using SalesSystem.Domain.Products.ValueObjects;
 
 namespace SalesSystem.Application.Products.Commands.UpdateProduct
 {
