@@ -1,6 +1,9 @@
+using FluentValidation;
+using FluentValidation.AspNetCore;
 using Microsoft.EntityFrameworkCore;
 using SalesSystem.Application.Commands.CreateProduct;
 using SalesSystem.Application.Mappings;
+using SalesSystem.Application.Validators;
 using SalesSystem.Domain.Interfaces;
 using SalesSystem.Infrastructure.Persistence;
 using SalesSystem.Infrastructure.Repositories;
@@ -16,7 +19,12 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddMediatR(cfg =>
     cfg.RegisterServicesFromAssembly(typeof(CreateProductCommandHandler).Assembly));
 
+//Mapping
 builder.Services.AddAutoMapper(typeof(MappingProfile));
+
+//Validators
+builder.Services.AddValidatorsFromAssemblyContaining<CreateProductCommandValidator>();
+builder.Services.AddFluentValidationAutoValidation();
 
 //Repositories
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
