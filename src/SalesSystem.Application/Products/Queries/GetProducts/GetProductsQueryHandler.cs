@@ -54,13 +54,12 @@ namespace SalesSystem.Application.Products.Queries.GetProducts
                 .ProjectTo<ProductDto>(_mapper.ConfigurationProvider)
                 .ToListAsync(cancellationToken);
 
-            return new PaginatedResult<ProductDto>
-            {
-                Data = products,
-                TotalItems = totalItems,
-                CurrentPage = request.Page,
-                TotalPages = totalPages
-            };
+            return new PaginatedResult<ProductDto>(
+                products,
+                totalItems,
+                request.Page,
+                request.Size
+            );
         }
     }
 }

@@ -5,6 +5,8 @@ using SalesSystem.Application.Users.Commands.CreateUser;
 using SalesSystem.Application.Users.Commands.DeleteUser;
 using SalesSystem.Application.Users.Commands.UpdateUser;
 using SalesSystem.Application.Users.DTOs;
+using SalesSystem.Application.Users.Queries.GetUserById;
+using SalesSystem.Application.Users.Queries.GetUsers;
 
 namespace SalesSystem.API.Controllers
 {
