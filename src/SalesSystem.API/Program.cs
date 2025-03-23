@@ -1,6 +1,7 @@
 using FluentValidation;
 using FluentValidation.AspNetCore;
 using Microsoft.EntityFrameworkCore;
+using SalesSystem.Application.Carts.Mapping;
 using SalesSystem.Application.Products.Commands.CreateProduct;
 using SalesSystem.Application.Products.Mappings;
 using SalesSystem.Application.Products.Validators;
@@ -21,7 +22,9 @@ builder.Services.AddMediatR(cfg =>
     cfg.RegisterServicesFromAssembly(typeof(CreateProductCommandHandler).Assembly));
 
 //Mapping
-builder.Services.AddAutoMapper(typeof(MappingProfile));
+//builder.Services.AddAutoMapper(typeof(MappingProfile));
+// AutoMapper
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 //Validators
 builder.Services.AddValidatorsFromAssemblyContaining<CreateProductCommandValidator>();
