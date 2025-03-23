@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using SalesSystem.Application.Common;
 using SalesSystem.Application.Users.Commands.CreateUser;
@@ -10,6 +11,7 @@ using SalesSystem.Application.Users.Queries.GetUsers;
 
 namespace SalesSystem.API.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class UsersController : ControllerBase

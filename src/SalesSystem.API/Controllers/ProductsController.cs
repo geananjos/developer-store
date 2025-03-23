@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using SalesSystem.Application.Common;
 using SalesSystem.Application.Products.Commands.CreateProduct;
@@ -10,6 +11,7 @@ using SalesSystem.Application.Products.Queries.GetProducts;
 
 namespace SalesSystem.API.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class ProductsController : ControllerBase

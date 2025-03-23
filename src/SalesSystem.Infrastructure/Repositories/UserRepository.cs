@@ -46,5 +46,11 @@ namespace SalesSystem.Infrastructure.Repositories
         {
             return _context.Users.AsNoTracking();
         }
+
+        public async Task<User?> GetByUsernameAsync(string username)
+        {
+            return await _context.Users
+                .FirstOrDefaultAsync(u => u.Username == username);
+        }
     }
 }

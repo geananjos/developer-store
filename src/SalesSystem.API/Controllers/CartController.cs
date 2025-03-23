@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using SalesSystem.Application.Carts.Commands.CreateCart;
 using SalesSystem.Application.Carts.Commands.DeleteCart;
@@ -10,6 +11,7 @@ using SalesSystem.Application.Common;
 
 namespace SalesSystem.API.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class CartsController : ControllerBase
