@@ -24,7 +24,8 @@ namespace SalesSystem.Application.Carts.Commands.CreateCart
                 .Select(p => new CartProduct(p.ProductId, p.Quantity))
                 .ToList();
 
-            var cart = new Cart(request.UserId, request.Date, cartProducts);
+            var utcDate = DateTime.SpecifyKind(request.Date, DateTimeKind.Utc);
+            var cart = new Cart(request.UserId, utcDate, cartProducts);
 
             await _repository.AddAsync(cart);
 
