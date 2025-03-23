@@ -24,6 +24,10 @@ namespace SalesSystem.Infrastructure.Persistence.Configurations
 
                 products.Property(p => p.ProductId).IsRequired();
                 products.Property(p => p.Quantity).IsRequired();
+
+                products.Property(p => p.Discount)
+                        .HasColumnType("decimal(5,2)")
+                        .IsRequired();
             });
         }
     }

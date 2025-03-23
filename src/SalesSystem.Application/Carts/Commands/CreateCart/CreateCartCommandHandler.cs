@@ -20,12 +20,10 @@ namespace SalesSystem.Application.Carts.Commands.CreateCart
 
         public async Task<CartDto> Handle(CreateCartCommand request, CancellationToken cancellationToken)
         {
-            var cartProducts = request.Products
-                .Select(p => new CartProduct(p.ProductId, p.Quantity))
-                .ToList();
-
             var utcDate = DateTime.SpecifyKind(request.Date, DateTimeKind.Utc);
-            var cart = new Cart(request.UserId, utcDate, cartProducts);
+            var items = request.Products.Select(p => (p.ProductId, p.Quantity)).ToList();
+
+            var cart = new Cart(request.UserId, utcDate, items);
 
             await _repository.AddAsync(cart);
 

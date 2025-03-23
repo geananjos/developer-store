@@ -22,12 +22,10 @@ namespace SalesSystem.Application.Carts.Commands.UpdateCart
             var cart = await _repository.GetByIdAsync(request.Id);
             if (cart is null) return null;
 
-            var cartProducts = request.Products
-                .Select(p => new CartProduct(p.ProductId, p.Quantity))
-                .ToList();
+            var utcDate = DateTime.SpecifyKind(request.Date, DateTimeKind.Utc);
+            var items = request.Products.Select(p => (p.ProductId, p.Quantity)).ToList();
 
-            cart.Update(request.UserId, request.Date, cartProducts);
-
+            cart.Update(request.UserId, utcDate, items);
             await _repository.UpdateAsync(cart);
 
             return _mapper.Map<CartDto>(cart);
