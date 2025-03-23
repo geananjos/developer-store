@@ -1,10 +1,9 @@
 using FluentValidation;
 using FluentValidation.AspNetCore;
 using Microsoft.EntityFrameworkCore;
-using SalesSystem.Application.Carts.Mapping;
 using SalesSystem.Application.Products.Commands.CreateProduct;
-using SalesSystem.Application.Products.Mappings;
 using SalesSystem.Application.Products.Validators;
+using SalesSystem.Domain.Carts.Interfaces;
 using SalesSystem.Domain.Products.Interfaces;
 using SalesSystem.Domain.Users.Interfaces;
 using SalesSystem.Infrastructure.Persistence;
@@ -33,6 +32,7 @@ builder.Services.AddFluentValidationAutoValidation();
 //Repositories
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<ICartRepository, CartRepository>();
 
 
 var app = builder.Build();
