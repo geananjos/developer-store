@@ -2,6 +2,7 @@
 using MediatR;
 using SalesSystem.Application.Users.DTOs;
 using SalesSystem.Domain.Users.Enums;
+using SalesSystem.Domain.Users.Interfaces;
 using SalesSystem.Domain.Users.ValueObjects;
 
 namespace SalesSystem.Application.Users.Commands.UpdateUser

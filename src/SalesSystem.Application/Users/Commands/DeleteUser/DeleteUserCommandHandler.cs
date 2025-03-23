@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using SalesSystem.Domain.Users.Interfaces;
 
 namespace SalesSystem.Application.Users.Commands.DeleteUser
 {
