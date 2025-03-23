@@ -5,6 +5,7 @@ using SalesSystem.Application.Products.Commands.CreateProduct;
 using SalesSystem.Application.Products.Mappings;
 using SalesSystem.Application.Products.Validators;
 using SalesSystem.Domain.Products.Interfaces;
+using SalesSystem.Domain.Users.Interfaces;
 using SalesSystem.Infrastructure.Persistence;
 using SalesSystem.Infrastructure.Repositories;
 
@@ -28,6 +29,8 @@ builder.Services.AddFluentValidationAutoValidation();
 
 //Repositories
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+
 
 var app = builder.Build();
 
