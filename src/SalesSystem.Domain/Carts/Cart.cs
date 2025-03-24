@@ -35,7 +35,7 @@ namespace SalesSystem.Domain.Carts
             }
         }
 
-        private void AddProduct(int productId, int quantity)
+        public void AddProduct(int productId, int quantity)
         {
             if (quantity > 20)
                 throw new InvalidOperationException("Não é permitido vender mais de 20 unidades do mesmo produto.");
