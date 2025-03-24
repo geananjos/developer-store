@@ -44,7 +44,6 @@ Uma API RESTful desenvolvida com **.NET 8**, **PostgreSQL**, **DDD**, **JWT Auth
 
 ```
 git clone https://github.com/geananjos/developer-store.git
-cd sales-system-api
 ```
 
 ### 2. Crie o banco de dados no PostgreSQL
