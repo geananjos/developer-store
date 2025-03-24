@@ -19,12 +19,11 @@ namespace SalesSystem.Application.Auth.Commands.Login
         {
             var user = await _userRepository.GetByUsernameAsync(request.Username);
 
-            if (user == null || user.Password != request.Password)
-                return new LoginResponse(); // retorna token vazio = não autenticado
+            if (user == null || !BCrypt.Net.BCrypt.Verify(request.Password, user.Password))
+                return new LoginResponse();
 
             var token = _tokenGenerator.GenerateToken(user);
             return new LoginResponse { Token = token };
         }
     }
-
 }

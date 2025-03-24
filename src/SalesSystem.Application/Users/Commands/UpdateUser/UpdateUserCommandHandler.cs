@@ -23,10 +23,17 @@ namespace SalesSystem.Application.Users.Commands.UpdateUser
             var user = await _repository.GetByIdAsync(request.Id);
             if (user is null) return null;
 
+            var newPassword = request.Password;
+
+            if (!string.IsNullOrWhiteSpace(newPassword) && !BCrypt.Net.BCrypt.Verify(newPassword, user.Password))
+                newPassword = BCrypt.Net.BCrypt.HashPassword(newPassword);
+            else
+                newPassword = user.Password;
+
             user.Update(
                 request.Email,
                 request.Username,
-                request.Password,
+                newPassword,
                 new Name(request.Name.Firstname, request.Name.Lastname),
                 new Address(
                     request.Address.City,

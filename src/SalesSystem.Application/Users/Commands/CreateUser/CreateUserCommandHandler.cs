@@ -21,10 +21,12 @@ namespace SalesSystem.Application.Users.Commands.CreateUser
 
         public async Task<UserDto> Handle(CreateUserCommand request, CancellationToken cancellationToken)
         {
+            var hashedPassword = BCrypt.Net.BCrypt.HashPassword(request.Password);
+
             var user = new User(
                 request.Email,
                 request.Username,
-                request.Password,
+                hashedPassword,
                 new Name(request.Name.Firstname, request.Name.Lastname),
                 new Address(
                     request.Address.City,
